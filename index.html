@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Academic personal homepage with research profile, publications, projects, and contact information."
+    />
+    <title>Tiancheng Zhang | Academic Homepage</title>
+    <script>
+      const savedTheme = (() => {
+        try {
+          return localStorage.getItem("theme");
+        } catch {
+          return null;
+        }
+      })();
+      if (savedTheme === "dark") {
+        document.documentElement.dataset.theme = "dark";
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css?v=20260615-publication-bottom-tags" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">Tiancheng Zhang（张天程）</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#service">Service</a>
+        <a href="#projects">Open Source</a>
+        <a href="#internships">Internships</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Toggle theme">
+        <span aria-hidden="true">☾</span>
+      </button>
+    </header>
+
+    <main id="top" class="page">
+      <aside class="profile-panel" aria-label="Profile summary">
+        <img class="avatar" src="assets/avatar.jpg" alt="Tiancheng Zhang portrait" />
+        <h1>
+          Tiancheng Zhang
+          <span>张天程</span>
+        </h1>
+        <p class="role">
+          Ph.D. Student
+          <span>2024.09 - Present</span>
+        </p>
+        <p class="affiliation">
+          College of Intelligence and Computing, Tianjin University
+        </p>
+        <p class="profile-email">
+          Email:
+          <a href="mailto:tianchengzhang@tju.edu.cn">tianchengzhang@tju.edu.cn</a>
+        </p>
+
+        <div class="profile-links">
+          <a href="https://scholar.google.com/citations?user=aPX3zWkAAAAJ&hl=zh-CN&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://orcid.org/my-orcid?orcid=0009-0006-7681-1223" target="_blank" rel="noopener noreferrer">ORCID</a>
+          <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        </div>
+      </aside>
+
+      <div class="content">
+        <section id="about" class="section">
+          <h2>About</h2>
+          <p>
+            I am a second-year Ph.D. student in the College of Intelligence and
+            Computing at Tianjin University, where I work with the
+            <a href="http://www.drxiaofei.wang/" target="_blank" rel="noopener noreferrer">EdgeBigBang Group</a>
+            under the supervision of Professor Xiaofei Wang.
+          </p>
+          <p>
+            My research explores the intersection of machine learning and
+            systems, with a focus on building intelligent, high-performance
+            cloud and edge infrastructures that deliver high throughput and SLO
+            compliance in dynamic multi-tenant environments. My current work
+            centers on <strong>workload forecasting</strong> and
+            <strong>unified frameworks for LLM inference</strong> across
+            distributed platforms.
+          </p>
+
+          <div class="info-grid">
+            <div>
+              <span class="label">Research</span>
+              <strong>Workload Forecasting<br />LLM Serving</strong>
+            </div>
+            <div>
+              <span class="label">Location</span>
+              <strong>No.135 Yaguan Road, Haihe Education Park, Tianjin 300350</strong>
+            </div>
+            <div>
+              <span class="label">Status</span>
+              <strong>Open to collaboration<br />Trying new things</strong>
+            </div>
+          </div>
+        </section>
+
+        <section id="news" class="section">
+          <h2>News</h2>
+          <ol class="timeline">
+            <li>
+              <time datetime="2026-07">Jul 2026</time>
+              <span>I will attend ICML 2026 in Korea. Looking forward to meeting you there.</span>
+            </li>
+          </ol>
+        </section>
+
+        <section id="publications" class="section">
+          <div class="section-title-row">
+            <div>
+              <h2>Publications</h2>
+            </div>
+            <div class="publication-links">
+              <a class="text-link" href="https://scholar.google.com/citations?user=aPX3zWkAAAAJ&hl=zh-CN&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+              <a class="text-link" href="https://orcid.org/my-orcid?orcid=0009-0006-7681-1223" target="_blank" rel="noopener noreferrer">ORCID</a>
+            </div>
+          </div>
+
+          <div class="filters" aria-label="Publication filters">
+            <input
+              id="publicationSearch"
+              type="search"
+              placeholder="Search publications"
+              aria-label="Search publications"
+            />
+            <div class="filter-row" data-filter-group="type">
+              <span>Type</span>
+              <button class="filter-button active" data-filter="all">All</button>
+              <button class="filter-button" data-filter="conference">Conference</button>
+              <button class="filter-button" data-filter="journal">Journal</button>
+              <button class="filter-button" data-filter="book-chapter">Book Chapter</button>
+              <button class="filter-button" data-filter="preprint">Preprint</button>
+            </div>
+            <div class="filter-row" data-filter-group="area">
+              <span>Area</span>
+              <button class="filter-button active" data-filter="all">All</button>
+              <button class="filter-button" data-filter="LLM Serving">LLM Serving</button>
+              <button class="filter-button" data-filter="Cloud-Edge Systems">Cloud-Edge Systems</button>
+              <button class="filter-button" data-filter="Semantics">Semantics</button>
+              <button class="filter-button" data-filter="Workload Forecasting">Workload Forecasting</button>
+            </div>
+            <div class="filter-row" data-filter-group="mark">
+              <span>Mark</span>
+              <button class="filter-button active" data-filter="all">All</button>
+              <button class="filter-button" data-filter="highlight">Highlight</button>
+            </div>
+          </div>
+
+          <p id="publicationCount" class="result-count">0 publications</p>
+          <div id="publicationList" class="publication-list"></div>
+        </section>
+
+        <section id="service" class="section">
+          <h2>Academic Service</h2>
+          <ul class="service-list">
+            <li>
+              <span>SIGKDD 2025</span>
+              <strong>Reviewer</strong>
+            </li>
+            <li>
+              <span>IEEE Transactions on Cognitive Communications and Networking</span>
+              <strong>Reviewer</strong>
+            </li>
+            <li>
+              <span>IEEE Network</span>
+              <strong>Reviewer</strong>
+            </li>
+            <li>
+              <span>IEEE INFOCOM Workshop</span>
+              <strong>Reviewer</strong>
+            </li>
+          </ul>
+        </section>
+
+        <section id="projects" class="section">
+          <h2>Open Source Projects</h2>
+          <div class="project-grid">
+            <article class="project-card">
+              <h3>KDD25_MetaEformer</h3>
+              <p>
+                Code release for MetaEformer, a forecasting framework that
+                leverages meta-patterns in complex and dynamic systems.
+              </p>
+              <a class="text-link" href="https://github.com/EdgeBigBang/KDD25_MetaEformer" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+            </article>
+            <article class="project-card">
+              <h3>ECAI25_HRS</h3>
+              <p>
+                Code release for HRS, a scheduling-aware representation
+                framework for time series forecasting in cloud-edge platforms.
+              </p>
+              <a class="text-link" href="https://github.com/EdgeBigBang/ECAI25_HRS" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+            </article>
+            <article class="project-card">
+              <h3>EasyTS</h3>
+              <p>
+                Code release for EasyTS, an AAAI 2024 project and open-source
+                toolkit for long time series forecasting.
+              </p>
+              <a class="text-link" href="https://github.com/EdgeBigBang/EasyTS" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+            </article>
+          </div>
+        </section>
+
+        <section id="internships" class="section">
+          <h2>Internships</h2>
+          <div class="experience-list">
+            <article class="experience-item">
+              <div class="experience-meta">May 2022 - Sep 2023</div>
+              <div>
+                <h3>
+                  Algorithm Engineer,
+                  <a href="https://www.anjie-iot.com/" target="_blank" rel="noopener noreferrer">ANJIE-IOT</a>
+                </h3>
+                <p>
+                  Developed energy load forecasting algorithms and contributed
+                  to the energy router product, which received the First Prize
+                  of Tianjin Science and Technology Progress Award.
+                </p>
+              </div>
+            </article>
+            <article class="experience-item">
+              <div class="experience-meta">Dec 2023 - May 2024<br />Jul 2024 - Sep 2024</div>
+              <div>
+                <h3>
+                  Algorithm Engineer,
+                  <a href="https://ppio.com/" target="_blank" rel="noopener noreferrer">PPIO (Paiou Cloud)</a>
+                </h3>
+                <p>
+                  Worked on workload forecasting for audio and video network
+                  traffic, and developed intelligent scheduling algorithms for
+                  cloud-edge systems.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="cv" class="section">
+          <h2>CV</h2>
+          <p>
+            A Chinese CV is available below. An English CV will be added later.
+          </p>
+          <a class="button" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">View Chinese CV</a>
+        </section>
+
+        <section id="contact" class="section">
+          <h2>Contact</h2>
+          <p>
+            Email is the best way to reach me:
+            <a href="mailto:tianchengzhang@tju.edu.cn">tianchengzhang@tju.edu.cn</a>.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Tiancheng Zhang</span>
+      <span>Built with HTML, CSS, JavaScript, and GitHub Pages.</span>
+    </footer>
+
+    <script src="script.js?v=20260615-publication-layout"></script>
+  </body>
+</html>
