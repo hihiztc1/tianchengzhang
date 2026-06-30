@@ -49,6 +49,7 @@ const publications = [
     authors:
       "Tiancheng Zhang, Yulin Chen, Yunfeng Zhao, Shaoyuan Huang, Cheng Zhang, Xiaofei Wang",
     abstract: "International Conference on Machine Learning. CCF-A.",
+    links: [{ label: "PDF", url: "papers/MAPS_ICML26.pdf" }],
   },
   {
     venue: "KDD'25",
@@ -220,7 +221,10 @@ function renderPublications() {
             publication.links?.length
               ? `<div class="tags">
                   ${publication.links
-                    .map((link) => `<a class="tag" href="${link.url}">${link.label}</a>`)
+                    .map(
+                      (link) =>
+                        `<a class="tag" href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a>`
+                    )
                     .join("")}
                 </div>`
               : ""
